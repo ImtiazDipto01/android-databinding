@@ -6,6 +6,10 @@
         <variable
             name="user"
             type="com.example.dipto.databindingpractice.normaldatabinding.UserPojo"/>
+
+        <variable
+            name="handlers"
+            type="com.example.dipto.databindingpractice.normaldatabinding.FirstActivity.MyClickHandlers" />
     </data>
 
     <LinearLayout
@@ -24,7 +28,8 @@
             android:text="@{user.name}"
             android:textColor="@android:color/black"
             android:textSize="16sp"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:hint="@string/demo_name" />
 
         <TextView
             android:id="@+id/user_email"
@@ -33,7 +38,9 @@
             android:text="@{user.email}"
             android:textColor="@android:color/black"
             android:layout_marginTop="5dp"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:hint="@string/demo_email"
+            android:onClick="@{handlers::onEmailClicked}"/>
 
     </LinearLayout>
 
