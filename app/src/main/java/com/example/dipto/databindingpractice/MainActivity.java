@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             case R.id.btn_recyclerview_screen:{
+                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                startActivity(intent);
                 break;
             }
 
