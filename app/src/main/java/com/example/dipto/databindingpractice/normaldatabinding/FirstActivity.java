@@ -38,8 +38,8 @@ public class FirstActivity extends AppCompatActivity {
             this.context = context;
         }
 
-        public void onEmailClicked(View view) {
-            Toast.makeText(getApplicationContext(), "Email Clicked", Toast.LENGTH_SHORT).show();
+        public void onEmailClicked(String name) {
+            Toast.makeText(getApplicationContext(), "Email Clicked and name is :"+name, Toast.LENGTH_SHORT).show();
         }
     }
 }
