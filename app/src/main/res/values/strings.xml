@@ -2,4 +2,5 @@
     <string name="app_name">DataBindingPractice</string>
     <string name="demo_name">Abul Kalam</string>
     <string name="demo_email">kalam@gmail.com</string>
+    <string name="demo_age">25</string>
 </resources>

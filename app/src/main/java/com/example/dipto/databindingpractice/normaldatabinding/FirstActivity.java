@@ -22,8 +22,9 @@ public class FirstActivity extends AppCompatActivity {
         ActivityFirstBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_first);
 
         user = new UserPojo();
-        user.setEmail("Imtiaz@gmail.com");
+        user.setEmail(null);
         user.setName("Imtiaz Uddin Ahmed");
+        user.setAge(18);
         binding.setUser(user);
 
         handlers = new MyClickHandlers(this) ;

@@ -4,6 +4,15 @@ public class UserPojo {
 
     private String name ;
     private String email ;
+    private int age ;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public String getName() {
         return name;

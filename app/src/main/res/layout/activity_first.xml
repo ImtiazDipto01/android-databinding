@@ -35,12 +35,25 @@
             android:id="@+id/user_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.email}"
+            android:text="@{user.email ?? `No Email Found`}"
             android:textColor="@android:color/black"
             android:layout_marginTop="5dp"
             android:textSize="16sp"
             android:hint="@string/demo_email"
             android:onClick="@{() -> handlers.onEmailClicked(user.name)}"/>
+
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(user.age)}"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:hint="@string/demo_age"
+            android:textSize="18dp"
+            android:onClick="@{() -> handlers.onEmailClicked(user.name)}"/>
+
 
     </LinearLayout>
 
