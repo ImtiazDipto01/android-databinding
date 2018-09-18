@@ -10,10 +10,14 @@ import android.widget.Toast;
 import com.example.dipto.databindingpractice.R;
 import com.example.dipto.databindingpractice.databinding.ActivityFirstBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FirstActivity extends AppCompatActivity {
 
-    private UserPojo user ;
+    private UserPojo user, user2 ;
     private MyClickHandlers handlers ;
+    private List<UserPojo> userList ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +31,16 @@ public class FirstActivity extends AppCompatActivity {
         user.setAge(18);
         binding.setUser(user);
 
+        user2 = new UserPojo();
+        user2.setEmail("r@gmail.com");
+        user2.setName("Rayhan Uddin");
+        user2.setAge(22);
+        userList = new ArrayList<UserPojo>();
+        userList.add(user2) ;
+
         handlers = new MyClickHandlers(this) ;
         binding.setHandlers(handlers);
+        binding.setUserList(userList);
     }
 
     public class MyClickHandlers {

@@ -3,6 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+        <import type="java.util.List"></import>
+        <import type="com.example.dipto.databindingpractice.normaldatabinding.UserPojo"></import>
         <variable
             name="user"
             type="com.example.dipto.databindingpractice.normaldatabinding.UserPojo"/>
@@ -10,6 +12,11 @@
         <variable
             name="handlers"
             type="com.example.dipto.databindingpractice.normaldatabinding.FirstActivity.MyClickHandlers" />
+        
+        <variable
+            name="userList"
+            type="List&lt;UserPojo&gt;"/>
+
     </data>
 
     <LinearLayout
@@ -53,6 +60,37 @@
             android:hint="@string/demo_age"
             android:textSize="18dp"
             android:onClick="@{() -> handlers.onEmailClicked(user.name)}"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="-----------now showing list datas, imageview, string file---------"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:id="@+id/user_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{userList[0].name}"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:hint="abul kalam" />
+
+        <TextView
+            android:id="@+id/user_email_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{userList[0].email ?? `No Email Found`}"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:hint="@string/demo_email"
+            android:onClick="@{() -> handlers.onEmailClicked(user.name)}"
+            android:gravity="center"/>
 
 
     </LinearLayout>
