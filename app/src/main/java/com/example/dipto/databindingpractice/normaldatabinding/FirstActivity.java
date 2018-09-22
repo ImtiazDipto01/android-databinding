@@ -15,7 +15,7 @@ import java.util.List;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private UserPojo user, user2 ;
+    private UserPojo user;
     private MyClickHandlers handlers ;
     private List<UserPojo> userList ;
 
@@ -31,7 +31,7 @@ public class FirstActivity extends AppCompatActivity {
         user.setAge(18);
         binding.setUser(user);
 
-        user2 = new UserPojo();
+        UserPojo user2 = new UserPojo();
         user2.setEmail("r@gmail.com");
         user2.setName("Rayhan Uddin");
         user2.setAge(22);
