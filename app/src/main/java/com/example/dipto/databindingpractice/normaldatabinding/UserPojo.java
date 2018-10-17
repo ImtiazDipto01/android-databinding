@@ -5,6 +5,16 @@ public class UserPojo {
     private String name ;
     private String email ;
     private int age ;
+    private String phoneNumber ;
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
 
     public int getAge() {
         return age;

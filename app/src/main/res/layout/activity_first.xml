@@ -4,6 +4,7 @@
 
     <data>
         <import type="java.util.List"></import>
+        <import type="java.util.HashMap"></import>
         <import type="com.example.dipto.databindingpractice.normaldatabinding.UserPojo"></import>
         <variable
             name="user"
@@ -16,6 +17,10 @@
         <variable
             name="userList"
             type="List&lt;UserPojo&gt;"/>
+
+        <variable
+            name="myHashMap"
+            type="HashMap&lt;String,String&gt;"/>
 
     </data>
 
@@ -90,6 +95,17 @@
             android:textSize="16sp"
             android:hint="@string/demo_email"
             android:onClick="@{() -> handlers.onEmailClicked(user.name)}"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{myHashMap[userList[0].name] == null ? `no phone number provided` : myHashMap[userList[0].name]}"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:hint="@string/demo_email"
             android:gravity="center"/>
 
 
