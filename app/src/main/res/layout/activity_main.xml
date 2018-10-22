@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/btn_normal_screen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Normal Data Binding"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+    <data>
+        <variable name="clickListener" type="com.example.dipto.databindingpractice.MainActivity.MainActivityClickListeners"/>
+    </data>
 
-    <Button
-        android:id="@+id/btn_recyclerview_screen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data binding Recyclerview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/btn_normal_screen"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/btn_normal_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Data Binding"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:onClick="@{() -> clickListener.normalDataBindingClicked()}"/>
+
+        <Button
+            android:id="@+id/btn_user_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USer Profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btn_normal_screen"
+            android:onClick="@{() -> clickListener.userProfileDataBindingClicked()}"/>
+
+        <Button
+            android:id="@+id/btn_recyclerview_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data binding Recyclerview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btn_user_profile"
+            android:onClick="@{() -> clickListener.recyclerDataBindingClicked()}"/>
+
+    </RelativeLayout>
+
+</layout>

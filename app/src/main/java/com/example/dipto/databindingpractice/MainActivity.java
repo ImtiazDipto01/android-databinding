@@ -1,12 +1,16 @@
 package com.example.dipto.databindingpractice;
 
+import android.content.Context;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.dipto.databindingpractice.databinding.ActivityMainBinding;
 import com.example.dipto.databindingpractice.normaldatabinding.FirstActivity;
+import com.example.dipto.databindingpractice.userprofile.UserProfileActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -14,34 +18,35 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.btn_normal_screen)
-    Button btnNormalScreen;
-    @BindView(R.id.btn_recyclerview_screen)
-    Button btnRecyclerviewScreen;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+        ActivityMainBinding mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        MainActivityClickListeners mainActivityClickListeners = new MainActivityClickListeners(this) ;
+        mainBinding.setClickListener(mainActivityClickListeners);
     }
 
-    @OnClick({R.id.btn_normal_screen, R.id.btn_recyclerview_screen})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_normal_screen:{
-                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-                startActivity(intent);
-                break;
-            }
 
-            case R.id.btn_recyclerview_screen:{
-                Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-                startActivity(intent);
+    public class MainActivityClickListeners{
 
-                // new intent will e added here !
-                break;
-            }
+        private Context context ;
+
+        public  MainActivityClickListeners(Context context){
+            this.context = context ;
+        }
+
+        public void normalDataBindingClicked(){
+            Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+            startActivity(intent);
+        }
+
+        public void userProfileDataBindingClicked(){
+            Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+            startActivity(intent);
+        }
+
+        public void recyclerDataBindingClicked(){
 
         }
     }
