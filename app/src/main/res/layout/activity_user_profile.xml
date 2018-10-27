@@ -6,11 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="userprofile"
             type="com.example.dipto.databindingpractice.userprofile.UserProfile"/>
-
     </data>
 
     <RelativeLayout

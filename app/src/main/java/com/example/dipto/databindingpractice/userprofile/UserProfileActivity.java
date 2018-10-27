@@ -16,10 +16,10 @@ public class UserProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityUserProfileBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_user_profile);
 
+        // binding user profile
         userProfile = new UserProfile();
         userProfile.setName("Imtiaz Uddin Ahmed");
         userProfile.setAge(25);
-
         binding.setUserprofile(userProfile);
     }
 }
