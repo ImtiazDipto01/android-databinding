@@ -49,6 +49,18 @@
             app:imageUrl="@{userprofile.image}"
             android:scaleType="centerCrop"/>
 
+
+        <EditText
+            android:id="@+id/et_change_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_user_image"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:hint="Name"
+            android:text="@{userprofile.name}"/>
+
     </RelativeLayout>
 
 </layout>
