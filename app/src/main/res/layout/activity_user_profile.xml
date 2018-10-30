@@ -59,7 +59,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:hint="Name"
-            android:text="@{userprofile.name}"/>
+            android:text="@={userprofile.name}"/>
 
     </RelativeLayout>
 
