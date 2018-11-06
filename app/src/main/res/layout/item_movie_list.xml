@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.example.dipto.databindingpractice.recyclerview.MoviePojo">
+        </variable>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".3">
+
+            <ImageView
+                android:id="@+id/iv_movie_poster"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                app:movieImage="@{}"
+                android:background="@android:color/darker_gray"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="pairates of the carebian"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/tv_movie_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="2017"
+                android:textStyle="bold|italic"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark"/>
+
+
+            <TextView
+                android:id="@+id/tv_movie_director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Imtiaz Uddin Ahmed"
+                android:textStyle="bold|italic"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textColorHint="@android:color/holo_blue_dark"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
