@@ -30,8 +30,7 @@
                 android:layout_height="95dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="6dp"
-                app:movieImage="@{}"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
         </LinearLayout>
 
@@ -50,7 +49,8 @@
                 android:hint="pairates of the carebian"
                 android:textSize="18sp"
                 android:textColor="@android:color/black"
-                android:textColorHint="@android:color/black"/>
+                android:textColorHint="@android:color/black"
+                android:text="@{movie.movieName}"/>
 
             <TextView
                 android:id="@+id/tv_movie_year"
@@ -61,7 +61,8 @@
                 android:textStyle="bold|italic"
                 android:textSize="16sp"
                 android:textColor="@android:color/holo_blue_dark"
-                android:textColorHint="@android:color/holo_blue_dark"/>
+                android:textColorHint="@android:color/holo_blue_dark"
+                android:text="@{String.valueOf(movie.releaseYear)}"/>
 
 
             <TextView
@@ -73,7 +74,8 @@
                 android:textStyle="bold|italic"
                 android:textSize="16sp"
                 android:textColor="@android:color/holo_blue_dark"
-                android:textColorHint="@android:color/holo_blue_dark"/>
+                android:textColorHint="@android:color/holo_blue_dark"
+                android:text="@{movie.directorName}"/>
 
         </LinearLayout>
 
