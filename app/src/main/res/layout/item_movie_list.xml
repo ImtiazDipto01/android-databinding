@@ -30,7 +30,8 @@
                 android:layout_height="95dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="6dp"
-                android:background="@android:color/darker_gray" />
+                android:background="@android:color/darker_gray"
+                app:movieImage = "@{movie.moviePoster}"/>
 
         </LinearLayout>
 
