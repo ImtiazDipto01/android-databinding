@@ -13,12 +13,22 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.dipto.databindingpractice.R;
 import com.example.dipto.databindingpractice.databinding.ActivityRecyclerViewBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RecyclerViewActivity extends AppCompatActivity {
+
+    private List<MoviePojo> list ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityRecyclerViewBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view);
+        initInstance();
+    }
+
+    private void initInstance() {
+        list = new ArrayList<>() ;
     }
 
 
@@ -35,5 +45,45 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 .load(imagePoster)
                 .apply(options)
                 .into(ivMoviePoster);
+    }
+
+    private List<MoviePojo> getMovieList(){
+        List<MoviePojo> movieList = new ArrayList<>() ;
+
+        MoviePojo moviePojo1 = new MoviePojo("Mission: Impossible - Fallout",
+                "https://www.imdb.com/title/tt4912910/mediaviewer/rm1258310912",
+                2018,
+                "Christopher McQuarrie");
+        list.add(moviePojo1);
+
+
+        MoviePojo moviePojo2 = new MoviePojo("Avengers: Infinity War",
+                "https://www.imdb.com/title/tt4154756/mediaviewer/rm4044245504",
+                2018,
+                "Anthony Russo, Joe Russo");
+        list.add(moviePojo2);
+
+
+        MoviePojo moviePojo3 = new MoviePojo("La La Land",
+                "https://www.imdb.com/title/tt3783958/mediaviewer/rm3967749632",
+                2016,
+                "Damien Chazelle");
+        list.add(moviePojo3);
+
+
+        MoviePojo moviePojo4 = new MoviePojo("Captain America: Civil War",
+                "https://www.imdb.com/title/tt3498820/mediaviewer/rm3218348288",
+                2016,
+                "Anthony Russo, Joe Russo");
+        list.add(moviePojo4);
+
+
+        MoviePojo moviePojo5 = new MoviePojo("The Revenant",
+                "https://www.imdb.com/title/tt1663202/mediaviewer/rm2770541312",
+                2015,
+                "Alejandro G. Iñárritu");
+        list.add(moviePojo5);
+
+        return list;
     }
 }
