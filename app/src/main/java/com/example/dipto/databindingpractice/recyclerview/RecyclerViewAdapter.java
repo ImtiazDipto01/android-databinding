@@ -34,12 +34,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        ItemMovieListBinding binding = DataBindingUtil.bind(holder.itemView);
+        binding.setMovie(list.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
