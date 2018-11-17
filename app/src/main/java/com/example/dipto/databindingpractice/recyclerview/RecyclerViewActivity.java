@@ -25,6 +25,11 @@ public class RecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityRecyclerViewBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view);
         initInstance();
+        generateRecyclerView();
+    }
+
+    private void generateRecyclerView() {
+
     }
 
     private void initInstance() {
