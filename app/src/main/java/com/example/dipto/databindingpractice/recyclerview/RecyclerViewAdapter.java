@@ -1,11 +1,15 @@
 package com.example.dipto.databindingpractice.recyclerview;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.dipto.databindingpractice.R;
+import com.example.dipto.databindingpractice.databinding.ItemMovieListBinding;
 
 import java.util.List;
 
@@ -24,7 +28,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        ItemMovieListBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_movie_list, parent, false);
+        return new MyViewHolder(binding.getRoot());
     }
 
     @Override
