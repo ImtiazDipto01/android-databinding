@@ -4,6 +4,7 @@ import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -19,17 +20,23 @@ import java.util.List;
 public class RecyclerViewActivity extends AppCompatActivity {
 
     private List<MoviePojo> list ;
+    private LinearLayoutManager layoutManager ;
+    ActivityRecyclerViewBinding binding ;
+    RecyclerViewAdapter recyclerViewAdapter ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityRecyclerViewBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_recycler_view);
         initInstance();
         generateRecyclerView();
     }
 
     private void generateRecyclerView() {
-
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        recyclerViewAdapter = new RecyclerViewAdapter(RecyclerViewActivity.this, getMovieList());
+        binding.rvmovies.setLayoutManager(layoutManager);
+        binding.rvmovies.setAdapter(recyclerViewAdapter);
     }
 
     private void initInstance() {
