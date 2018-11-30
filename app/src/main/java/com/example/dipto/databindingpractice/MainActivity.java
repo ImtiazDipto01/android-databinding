@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.example.dipto.databindingpractice.databinding.ActivityMainBinding;
 import com.example.dipto.databindingpractice.normaldatabinding.FirstActivity;
+import com.example.dipto.databindingpractice.recyclerview.RecyclerViewActivity;
 import com.example.dipto.databindingpractice.userprofile.UserProfileActivity;
 
 import butterknife.BindView;
@@ -47,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void recyclerDataBindingClicked(){
-
+            Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+            startActivity(intent);
         }
     }
 }

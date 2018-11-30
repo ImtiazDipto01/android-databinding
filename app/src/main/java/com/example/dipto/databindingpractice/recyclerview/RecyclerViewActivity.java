@@ -63,35 +63,35 @@ public class RecyclerViewActivity extends AppCompatActivity {
         List<MoviePojo> movieList = new ArrayList<>() ;
 
         MoviePojo moviePojo1 = new MoviePojo("Mission: Impossible - Fallout",
-                "https://www.imdb.com/title/tt4912910/mediaviewer/rm1258310912",
+                "https://picsum.photos/200/300/?image=88",
                 2018,
                 "Christopher McQuarrie");
         list.add(moviePojo1);
 
 
         MoviePojo moviePojo2 = new MoviePojo("Avengers: Infinity War",
-                "https://www.imdb.com/title/tt4154756/mediaviewer/rm4044245504",
+                "https://picsum.photos/200/300/?image=89",
                 2018,
                 "Anthony Russo, Joe Russo");
         list.add(moviePojo2);
 
 
         MoviePojo moviePojo3 = new MoviePojo("La La Land",
-                "https://www.imdb.com/title/tt3783958/mediaviewer/rm3967749632",
+                "https://picsum.photos/200/300/?image=92",
                 2016,
                 "Damien Chazelle");
         list.add(moviePojo3);
 
 
         MoviePojo moviePojo4 = new MoviePojo("Captain America: Civil War",
-                "https://www.imdb.com/title/tt3498820/mediaviewer/rm3218348288",
+                "https://picsum.photos/200/300/?image=90",
                 2016,
                 "Anthony Russo, Joe Russo");
         list.add(moviePojo4);
 
 
         MoviePojo moviePojo5 = new MoviePojo("The Revenant",
-                "https://www.imdb.com/title/tt1663202/mediaviewer/rm2770541312",
+                "https://picsum.photos/200/300/?image=95",
                 2015,
                 "Alejandro G. Iñárritu");
         list.add(moviePojo5);
